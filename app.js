@@ -3,7 +3,6 @@
 // Crear l
 let amigos = [];
 
-
 // Función para agregar  un nuevo amigo 
 function agregarAmigo (){
     let amigoAgregado = document.getElementById('amigo').value; // Lectura de elmento de entrada de textbox
@@ -50,7 +49,15 @@ function sortearAmigo(){
     let amigoSorteado = amigos[indice];
 
     // Mostrar el resultado:
-    let resultadoNombre = document.getElementById('resultado');
-    resultadoNombre.innerHTML =  `El amigo secreto es: ${amigoSorteado}`;
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML =  `El amigo secreto es: ${amigoSorteado}`;
+
+}
+
+function reiniciarJuego(){
+    console.log ("Reinicia");
+    listaAmigos.innerHTML= ""; // Limpia la lista
+    amigos = [];
+    resultado.innerHTML="";
 
 }
